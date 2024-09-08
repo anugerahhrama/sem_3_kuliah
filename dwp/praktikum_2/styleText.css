@@ -1,0 +1,12 @@
+p {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.tulisan_warna {
+    color: blue;
+}
+
+.par1 {
+    letter-spacing: 5px;
+}
