@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="field-1">Nama Depan</label>
+    <input id="field-1" name="" value="" type="text">
+    <br><br>
+    <label for="field-2">Nama Belakang</label>
+    <input id="field-2" name="" value="" type="text">
+    <br><br>
+    <button id="btn">
+        submit
+    </button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const field1 = document.getElementById('field-1');
+        const field2 = document.getElementById('field-2');
+
+        btn.addEventListener('click', () => {
+            let result = '';
+            let namaDepan = field1.value.trim();
+            let namaBelakang = field2.value.trim();
+
+            // Jika nama depan kosong
+            if (namaDepan === '') {
+                result += 'Nama depan tidak boleh kosong.\n';
+            }
+
+            // Jika nama belakang kosong
+            if (namaBelakang === '') {
+                result += 'Nama belakang tidak boleh kosong.\n';
+            }
+
+            // Jika tidak ada error, tampilkan nama lengkap
+            if (result === '') {
+                result = `Nama lengkap: ${namaDepan} ${namaBelakang}`;
+            }
+
+            alert(result);
+        });
+    </script>
+
+
+</body>
+
+</html>
